@@ -1,7 +1,7 @@
 FROM rust
 
 LABEL maintainer="tmtmtoo <tmtmt2209@gmail.com>"
-LABEL version="0.2.28"
+LABEL version="0.2.29"
 LABEL description="The Rust wasm-bindgen environment"
 
 # install chrome
@@ -24,4 +24,4 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -
 RUN rustup update && rustup install nightly && rustup default nightly && rustup target add wasm32-unknown-unknown --toolchain nightly
 
 # install wasm-bindgen
-RUN cargo +nightly install --vers 0.2.28 wasm-bindgen-cli
+RUN cargo +nightly install --vers 0.2.29 wasm-bindgen-cli
